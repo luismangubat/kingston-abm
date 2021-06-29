@@ -1,0 +1,17 @@
+[mulab]
+mu01 ansible_host=130.15.5.150 ansible_port=22
+mu02 ansible_host=130.15.5.151 ansible_port=22
+mu03 ansible_host=130.15.5.152 ansible_port=22
+mu04 ansible_host=130.15.5.153 ansible_port=22
+mu05 ansible_host=130.15.5.154 ansible_port=22
+mu06 ansible_host=130.15.5.155 ansible_port=22
+mu07 ansible_host=130.15.5.156 ansible_port=22
+mu08 ansible_host=130.15.5.157 ansible_port=22
+mu09 ansible_host=130.15.5.158 ansible_port=22
+mu10 ansible_host=130.15.5.159 ansible_port=22
+mu11 ansible_host=130.15.5.160 ansible_port=22
+mu12 ansible_host=130.15.5.161 ansible_port=22
+mu13 ansible_host=130.15.5.162 ansible_port=22
+mu14 ansible_host=130.15.5.163 ansible_port=22
+mu15 ansible_host=130.15.5.164 ansible_port=22
+mu16 ansible_host=130.15.5.165 ansible_port=22
