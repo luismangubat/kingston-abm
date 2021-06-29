@@ -1,50 +1,40 @@
 ---
-- name: Set-up and run experiments
+- name: Set-up covid19sim
   hosts: "{{ host | default('localhost')}}"
 
   tasks:
 
-    - name: Copy experiment resources to remote host
-      copy:
-        src: data/
-        dest: src/data/
 
     - name: Create a new viritual environment
       shell: /opt/conda/bin/conda create -n covisim python=3.8 -y
       args:
         executable: /bin/bash
 
-    - name: Install MLFlow
-      shell: /opt/conda/bin/conda run -n covisim pip install mlflow
-
-    - name: Install Jupyter Notebook
-      shell: /opt/conda/bin/conda run -n covisim pip install jupyter
-
-    - name: Clone ctt module, required to run Covisim simulator
+    - name: Clone ctt module, required to run simulator
       git:
         repo: https://github.com/mila-iqia/COVI-ML
         dest: COVI-ML
         version: 19986f7427a7a643eb05fb41e5ed4dd113362cd6
         force: y
 
-    - name: Use corrected requirements.txt
+    - name: Use fixed requirements.txt
       copy:
-        src: requirements.txt
+        src: files/requirements.txt
         dest: COVI-ML
 
-    - name: Use corrected setup.py
+    - name: Use fixed setup.py
       copy:
-        src: setup.py
+        src: files/setup.py
         dest: COVI-ML
 
     - name: Install ctt module
       shell: cd COVI-ML && /opt/conda/bin/conda run -n covisim pip install -e .
 
-    - name: Checkout the branch edited to log data about each agent whenever they move from STORE 0
+    - name: Checkout a viable commit
       git:
         repo: https://github.com/QuMuLab/COVI-AgentSim
         dest: src/COVI-AgentSim
-        version: 168ec5198bc2c586ef8f4fd2181bd35dff9e1c7c
+        version: 8a8b9b5aa5ac4c13dd7220d856119e3916148622
 
     - name: Install simulator 
       shell: /opt/conda/bin/conda run -n covisim pip install -e .

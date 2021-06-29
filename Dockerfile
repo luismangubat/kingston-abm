@@ -46,5 +46,5 @@ RUN apt install git -y
 # Run experiments when container starts up
 
 RUN mkdir /src
-COPY playbook.yml /src
-CMD ansible-playbook -v --extra-vars "host=localhost" /src/playbook.yml && sleep infinity
+COPY ansible/playbooks/covid19sim.yml /src
+CMD ansible-playbook -v --extra-vars "host=localhost" /src/covid19sim.yml && sleep infinity
