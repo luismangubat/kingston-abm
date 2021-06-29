@@ -3,7 +3,7 @@
 defaults:
   - core
   - base_method
-  - region: montreal
+  - region: kingston
   - track: all
   - intervention: no_intervention
   - symptom_prevalence
