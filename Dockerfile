@@ -43,9 +43,7 @@ RUN apt install parallel -y
 RUN apt install git -y
 
 
-# Run experiments when container starts up
-
 RUN mkdir /src
-#COPY ansible/playbooks/covid19sim.yml /src
-CMD ansible-playbook -v --extra-vars "host=localhost" /src/ansible/playbooks/covid19sim.yml && sleep infinity
-#CMD sleep infinity
+
+#CMD ansible-playbook -v --extra-vars "host=localhost" /src/ansible/playbooks/covid19sim.yml && sleep infinity
+CMD sleep infinity
