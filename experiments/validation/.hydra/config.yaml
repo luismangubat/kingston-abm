@@ -6588,7 +6588,7 @@ init_fraction_sick: 0.002
 n_people: 3000
 out_chunk_size: null
 outdir: /src/experiments/validation/results/data
-seed: 1508
+seed: 3943
 simulation_days: 60
 start_time: '2020-02-28 00:00:00'
 track_all: false

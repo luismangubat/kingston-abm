@@ -79,7 +79,7 @@ hydra:
     id: ???
     name: run
     num: ???
-    override_dirname: APP_UPTAKE=-1,GLOBAL_MOBILITY_SCALING_FACTOR=0.85,INTERVENTION_DAY=-1,N_BEHAVIOR_LEVELS=2,USE_INFERENCE_SERVER=False,init_fraction_sick=0.002,intervention=no_intervention,n_people=3000,outdir=/src/experiments/validation/results/data,region=kingston0xdfc056a4fdb804e60e964b2cc5aae6ea.yaml,seed=1508,simulation_days=60,track=light,tune=True
+    override_dirname: APP_UPTAKE=-1,GLOBAL_MOBILITY_SCALING_FACTOR=0.85,INTERVENTION_DAY=-1,N_BEHAVIOR_LEVELS=2,USE_INFERENCE_SERVER=False,init_fraction_sick=0.002,intervention=no_intervention,n_people=3000,outdir=/src/experiments/validation/results/data,region=kingston0xdfc056a4fdb804e60e964b2cc5aae6ea,seed=3943,simulation_days=60,track=light,tune=True
   job_logging:
     disable_existing_loggers: false
     formatters:
@@ -106,15 +106,15 @@ hydra:
   overrides:
     hydra: []
     task:
-    - region=kingston0xdfc056a4fdb804e60e964b2cc5aae6ea.yaml
+    - region=kingston0xdfc056a4fdb804e60e964b2cc5aae6ea
     - intervention=no_intervention
     - track=light
+    - seed=3943
     - n_people=3000
     - simulation_days=60
     - init_fraction_sick=0.002
     - N_BEHAVIOR_LEVELS=2
     - tune=True
-    - seed=1508
     - GLOBAL_MOBILITY_SCALING_FACTOR=0.85
     - APP_UPTAKE=-1
     - USE_INFERENCE_SERVER=False

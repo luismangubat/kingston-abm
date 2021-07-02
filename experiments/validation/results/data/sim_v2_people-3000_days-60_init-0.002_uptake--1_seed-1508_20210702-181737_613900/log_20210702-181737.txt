@@ -1,0 +1,8 @@
+RISK_MODEL = 
+INTERVENTION_DAY = -1
+seed: 1508
+Type of run: UNMITIGATED
+Initializing humans ...
+Allocating houses ... 
+expanding the search for kids to middle generation for census family households
+Housing allocated with failed attempts: 0 

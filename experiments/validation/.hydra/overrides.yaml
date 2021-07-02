@@ -1,12 +1,12 @@
-- region=kingston0xdfc056a4fdb804e60e964b2cc5aae6ea.yaml
+- region=kingston0xdfc056a4fdb804e60e964b2cc5aae6ea
 - intervention=no_intervention
 - track=light
+- seed=3943
 - n_people=3000
 - simulation_days=60
 - init_fraction_sick=0.002
 - N_BEHAVIOR_LEVELS=2
 - tune=True
-- seed=1508
 - GLOBAL_MOBILITY_SCALING_FACTOR=0.85
 - APP_UPTAKE=-1
 - USE_INFERENCE_SERVER=False
