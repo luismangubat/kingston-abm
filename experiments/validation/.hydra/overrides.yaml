@@ -1,7 +1,8 @@
 - region=kingston0xdfc056a4fdb804e60e964b2cc5aae6ea
 - intervention=no_intervention
 - track=light
-- seed=3943
+- seed=3511
+- outdir=/src/experiments/validation/results/data/0x323219c230079382f2af0c132c1e4294
 - n_people=3000
 - simulation_days=60
 - init_fraction_sick=0.002
@@ -10,5 +11,4 @@
 - GLOBAL_MOBILITY_SCALING_FACTOR=0.85
 - APP_UPTAKE=-1
 - USE_INFERENCE_SERVER=False
-- outdir=/src/experiments/validation/results/data
 - INTERVENTION_DAY=-1

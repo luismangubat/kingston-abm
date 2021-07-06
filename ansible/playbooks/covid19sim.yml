@@ -13,45 +13,45 @@
     - name: Clone ctt module, required to run simulator
       git:
         repo: https://github.com/mila-iqia/COVI-ML
-        dest: /COVI-ML
+        dest: ~/COVI-ML
         version: 19986f7427a7a643eb05fb41e5ed4dd113362cd6
         force: y
 
     - name: Use fixed requirements.txt
       copy:
         src: files/requirements.txt
-        dest: /COVI-ML
+        dest: ~/COVI-ML
 
     - name: Use fixed setup.py
       copy:
         src: files/setup.py
-        dest: /COVI-ML
+        dest: ~/COVI-ML
 
     - name: Version of ctt module should be commit hash
       lineinfile:
-        path: /COVI-ML/setup.py
+        path: ~/COVI-ML/setup.py
         search_string: 'version='
         line: version='19986f7427a7a643eb05fb41e5ed4dd113362cd6',
 
     - name: Install ctt module
-      shell: cd /COVI-ML && /opt/conda/bin/conda run -n covisim pip install -e .
+      shell: cd ~/COVI-ML && /opt/conda/bin/conda run -n covisim pip install -e .
 
     - name: Checkout a viable commit
       git:
         repo: https://github.com/QuMuLab/COVI-AgentSim
-        dest: /COVI-AgentSim
+        dest: ~/COVI-AgentSim
         version: 8a8b9b5aa5ac4c13dd7220d856119e3916148622
         force: yes
         
     - name: Version of covid19sim module should be commit hash
       lineinfile:
-        path: /COVI-AgentSim/setup.py
+        path: ~/COVI-AgentSim/setup.py
         search_string: 'version'
         line: version='8a8b9b5aa5ac4c13dd7220d856119e3916148622',
 
     - name: Install simulator 
       shell: /opt/conda/bin/conda run -n covisim pip install -e .
       args:
-        chdir: /COVI-AgentSim
+        chdir: ~/COVI-AgentSim
 
 
