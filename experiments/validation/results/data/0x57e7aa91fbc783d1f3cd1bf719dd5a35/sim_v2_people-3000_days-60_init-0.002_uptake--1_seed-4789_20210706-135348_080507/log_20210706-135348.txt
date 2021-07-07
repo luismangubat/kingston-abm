@@ -1,0 +1,273 @@
+RISK_MODEL = 
+INTERVENTION_DAY = -1
+seed: 4789
+Type of run: UNMITIGATED
+Initializing humans ...
+Allocating houses ... 
+expanding the search for kids to middle generation for census family households
+Housing allocated with failed attempts: 3 
+Schedule prepared (Took 16.949s)
+Computing their preferences
+
+######## SIMULATOR KNOBS #########
+HOUSEHOLD_ASSORTATIVITY_STRENGTH: 0.5
+WORKPLACE_ASSORTATIVITY_STRENGTH: 5
+P_INVITATION_ACCEPTANCE: 0.5
+BEGIN_PREFERENTIAL_ATTACHMENT_FACTOR: 0.5
+END_PREFERENTIAL_ATTACHMENT_FACTOR: 0.5
+P_HOUSE_OVER_MISC_FOR_SOCIALS: 0.5
+CONTAGION_KNOB: 25
+ENVIRONMENTAL_INFECTION_KNOB: 0.0017
+TIME_SPENT_SCALE_FACTOR_FOR_SHORT_ACTIVITIES: 1.5
+TIME_SPENT_SCALE_FACTOR_FOR_WORK: 1.0
+TIME_SPENT_SCALE_FACTOR_SLEEP_AWAKE: 0.01
+GLOBAL_MOBILITY_SCALING_FACTOR: 0.85
+
+######## DEMOGRAPHICS / SYNTHETIC POPULATION #########
+NB: (i) census numbers are in brackets. (ii)  (**#@#**)  marks a 25 % realtive deviation from census
+
+Age (census) - mean: 43.555 (43.1), median:  44 (44.5), std: 25.290
+Gender: female: 44.233 % | male: 45.267 % | other: 10.500 % | 
+
+*** House allocation *** 
+ (**#@#**) Total ( %) number of residents in senior residencies (census): 25 (0.83 %) (1.23)
+Total houses: 1369
+Average house size -  2.173 ( 2.300)
+Household size - simulation% (census):  1.0: 29.58 % ( 28.60) |  2.0: 42.66 % ( 38.50) |  3.0: 12.78 % ( 14.80) |  4.0: 10.81 % ( 12.20) |  (**#@#**)  5.0: 4.16 % ( 6.00) | 
+Solo dwellers : Average age absolute:  56.51 (Average with mid point of age groups - simulated: 56.41 census: 59.64) | 
+Household type:  (**#@#**) multi-generation: 0.00 % (2.77) | Only adults: 78.96 % | 
+Allocation types: couple_with_0_kids: 31.848 %  ( 30.77)| couple_with_1_kids: 9.934 %  ( 10.26)| couple_with_2_kids: 9.861 %  ( 10.17)| couple_with_3_kids: 3.652 %  ( 3.87)|  (**#@#**) other_3: 0.073 %  ( 0.00)|  (**#@#**) other_4: 0.146 %  ( 0.00)|  (**#@#**) other_5: 0.219 %  ( 0.00)| single_parent_with_1_kids: 10.811 %  ( 11.34)| single_parent_with_2_kids: 2.776 %  ( 2.89)| single_parent_with_3_kids: 0.804 %  ( 0.72)|  (**#@#**) single_parent_with_4_kids: 0.292 %  ( 0.19)| solo: 29.584 %  ( 28.60)| 
+
+ *** Locations *** 
+Counts: HOUSEHOLD: 1369 | SENIOR_RESIDENCE: 3 | WORKPLACE: 108 | STORE: 2 | MISC: 6 | HOSPITAL: 1 | PARK: 1 | SCHOOL: 26 | 
+
+ *** Workforce *** 
+WORKPLACE - Total workforce: 1540 | Average number of workers:  14.26 | Average age of workers:  46.52
+	Number of WORKPLACE(1, 4) - 83. Total number of workers - 163
+	Number of WORKPLACE(5, 99) - 25. Total number of workers - 1377
+STORE - Total workforce: 2 | Average number of workers:  1.00 | Average age of workers:  55.00
+MISC - Total workforce: 6 | Average number of workers:  1.00 | Average age of workers:  41.83
+HOSPITALS - Total workforce: 33 | Number of doctors: 4 | Number of nurses: 26 | Number of nurses at SENIOR_RESIDENCES: 3
+SCHOOL - Number of teachers: 96 | Number of students: 631| Average number of teachers:  3.69| Average number of students:  24.27
+	Number of SCHOOL(2-4) - 2. Number of students: 20. Number of teachers: 4
+	Number of SCHOOL(4-5) - 6. Number of students: 30. Number of teachers: 10
+	Number of SCHOOL(5-12) - 7. Number of students: 236. Number of teachers: 49
+	Number of SCHOOL(12-17) - 5. Number of students: 171. Number of teachers: 19
+	Number of SCHOOL(17-29) - 6. Number of students: 174. Number of teachers: 14
+
+ *** Disease related initialization stats *** 
+Percentage of population that is asymptomatic  21.633
+
+ *** ****** *** ****** *** COVID infection seeded *** *** ****** *** ******
+
+Total number of infected humans 6
+	H:human:718 age:23, SEIR:0100 @ HOUSEHOLD:1291 - occ:2/inf - I:False living with 1 other residents
+	H:human:2279 age:63, SEIR:0100 @ HOUSEHOLD:713 - occ:1/inf - I:False living with 0 other residents
+	H:human:1486 age:43, SEIR:0100 @ HOUSEHOLD:201 - occ:2/inf - I:False living with 1 other residents
+	H:human:1921 age:50, SEIR:0100 @ HOUSEHOLD:739 - occ:1/inf - I:False living with 0 other residents
+	H:human:2208 age:62, SEIR:0100 @ HOUSEHOLD:480 - occ:3/inf - I:False living with 2 other residents
+	H:human:2931 age:106, SEIR:0100 @ HOUSEHOLD:826 - occ:1/inf - I:False living with 0 other residents
+
+PREFERENTIAL_ATTACHMENT_FACTOR: 0.5
+
+*** *** ****** *** ****** *** ****** *** ****** *** ****** *** ****** *** ****** *** ***
+
+
+#################### SIMULATION PROGRESS ##################
+Legend -
+* [ +Test ]: Total positive test results observed this day (Note: test results are available after some delay from the test time) / total tests administered on this day
+* [ P3 ]: Projected number of cases (E+I+R) if the cases were to grow with a doubling rate of 3 days.
+* [ TestQueue ]: Total number of people present in the test queue at the time of this print out.
+* [ H/C/D ]: Total number of people in hospital (H)/ ICU (C) at this point in simulation-time. Total died upto this day (D).
+* [ MC ]: Mean number of known connections of a person in the population (average degree of the social network). The attributes for known connections are drawn from surveyed data on mean contacts.
+* [ Q ]: Number of people (alive) quarantined as of midnight on that day.
+* [ 2x ]: Number of days to double the initial infections to the current level.
+        
+(0s)     Day  0: 2020-02-28 | S:2994 E:6    I:0    E+I+R:6    +Test:0/0 TestQueue:2 | P3: 6.00 | cold:0 allergies:0 flu:0 | H:0 C:0 D:0 | MC:  0.000 | Q: 0
+(5s)     Day  1: 2020-02-29 | S:2994 E:6    I:0    E+I+R:6    +Test:0/0 TestQueue:29 | P3: 7.56 | cold:0 allergies:0 flu:0 | H:0 C:0 D:0 | MC:  10.077 | Q: 9
+(12s)    Day  2: 2020-03-01 | S:2994 E:6    I:0    E+I+R:6    +Test:0/3 TestQueue:25 | P3: 9.52 | cold:3 allergies:5 flu:8 | H:0 C:0 D:0 | MC:  12.573 | Q: 17
+(17s)    Day  3: 2020-03-02 | S:2994 E:6    I:0    E+I+R:6    +Test:0/3 TestQueue:42 | P3:12.00 | cold:12 allergies:2 flu:15 | H:0 C:0 D:0 | MC:  14.045 | Q: 15
+(25s)    Day  4: 2020-03-03 | S:2994 E:6    I:0    E+I+R:6    +Test:0/6 TestQueue:44 | P3:15.12 | cold:18 allergies:2 flu:24 | H:0 C:0 D:0 | MC:  19.615 | Q: 18
+(32s)    Day  5: 2020-03-04 | S:2994 E:3    I:3    E+I+R:6    +Test:0/3 TestQueue:60 | P3:19.05 | cold:20 allergies:5 flu:27 | H:0 C:0 D:0 | MC:  23.595 | Q: 6
+(40s)    Day  6: 2020-03-05 | S:2994 E:1    I:5    E+I+R:6    +Test:0/3 TestQueue:64 | P3:24.00 | cold:26 allergies:2 flu:35 | H:0 C:0 D:0 | MC:  26.583 | Q: 9
+(48s)    Day  7: 2020-03-06 | S:2990 E:4    I:6    E+I+R:10   +Test:0/3 TestQueue:57 | P3:30.24 2x: 9.50 | cold:25 allergies:5 flu:39 | H:0 C:0 D:0 | MC:  28.899 | Q: 6
+(62s)    Day  8: 2020-03-07 | S:2984 E:10   I:6    E+I+R:16   +Test:0/3 TestQueue:69 | P3:38.10 2x: 5.65 | cold:25 allergies:6 flu:43 | H:0 C:0 D:0 | MC:  34.799 | Q: 10
+(65s)    Day  9: 2020-03-08 | S:2973 E:20   I:7    E+I+R:27   +Test:0/3 TestQueue:86 | P3:48.00 2x: 4.15 | cold:22 allergies:9 flu:45 | H:0 C:0 D:0 | MC:  34.838 | Q: 8
+(69s)    Day 10: 2020-03-09 | S:2972 E:17   I:11   E+I+R:28   +Test:0/3 TestQueue:85 | P3:60.48 2x: 4.50 | cold:25 allergies:2 flu:52 | H:0 C:0 D:0 | MC:  34.881 | Q: 8
+(81s)    Day 11: 2020-03-10 | S:2970 E:13   I:17   E+I+R:30   +Test:2/3 TestQueue:89 | P3:76.20 2x: 4.74 | cold:22 allergies:5 flu:49 | H:0 C:0 D:0 | MC:  39.181 | Q: 9
+(89s)    Day 12: 2020-03-11 | S:2953 E:26   I:21   E+I+R:47   +Test:0/3 TestQueue:94 | P3:96.00 2x: 4.04 | cold:25 allergies:3 flu:50 | H:1 C:0 D:0 | MC:  40.561 | Q: 10
+(97s)    Day 13: 2020-03-12 | S:2939 E:34   I:27   E+I+R:61   +Test:1/3 TestQueue:86 | P3:120.95 2x: 3.89 | cold:21 allergies:6 flu:49 | H:1 C:0 D:0 | MC:  41.749 | Q: 14
+(106s)   Day 14: 2020-03-13 | S:2923 E:45   I:32   E+I+R:77   +Test:1/3 TestQueue:96 | P3:152.39 2x: 3.80 | cold:28 allergies:2 flu:47 | H:1 C:0 D:0 | MC:  42.831 | Q: 16
+(115s)   Day 15: 2020-03-14 | S:2913 E:42   I:45   E+I+R:87   +Test:0/3 TestQueue:92 | P3:192.00 2x: 3.89 | cold:36 allergies:5 flu:44 | H:1 C:0 D:0 | MC:  43.743 | Q: 14
+(119s)   Day 16: 2020-03-15 | S:2888 E:54   I:58   E+I+R:112  +Test:2/3 TestQueue:93 | P3:241.90 2x: 3.79 | cold:37 allergies:3 flu:40 | H:1 C:0 D:0 | MC:  44.742 | Q: 20
+(123s)   Day 17: 2020-03-16 | S:2881 E:46   I:73   E+I+R:119  +Test:2/3 TestQueue:105 | P3:304.78 2x: 3.94 | cold:37 allergies:2 flu:40 | H:1 C:0 D:0 | MC:  44.759 | Q: 29
+(131s)   Day 18: 2020-03-17 | S:2879 E:29   I:92   E+I+R:121  +Test:2/3 TestQueue:107 | P3:384.00 2x: 4.15 | cold:31 allergies:3 flu:50 | H:1 C:0 D:0 | MC:  45.505 | Q: 35
+(139s)   Day 19: 2020-03-18 | S:2832 E:63   I:105  E+I+R:168  +Test:1/3 TestQueue:127 | P3:483.81 2x: 3.95 | cold:35 allergies:1 flu:52 | H:1 C:0 D:0 | MC:  46.216 | Q: 34
+(148s)   Day 20: 2020-03-19 | S:2802 E:86   I:111  E+I+R:198  +Test:3/3 TestQueue:138 | P3:609.56 2x: 3.96 | cold:33 allergies:2 flu:55 | H:2 C:0 D:0 | MC:  46.879 | Q: 41
+(157s)   Day 21: 2020-03-20 | S:2769 E:100  I:130  E+I+R:231  +Test:1/3 TestQueue:142 | P3:768.00 2x: 3.99 | cold:32 allergies:2 flu:53 | H:2 C:0 D:0 | MC:  47.409 | Q: 40
+(165s)   Day 22: 2020-03-21 | S:2735 E:108  I:153  E+I+R:265  +Test:2/3 TestQueue:153 | P3:967.62 2x: 4.03 | cold:30 allergies:3 flu:52 | H:4 C:0 D:0 | MC:  47.956 | Q: 46
+(169s)   Day 23: 2020-03-22 | S:2702 E:109  I:183  E+I+R:298  +Test:1/3 TestQueue:161 | P3:1219.12 2x: 4.08 | cold:30 allergies:2 flu:57 | H:6 C:0 D:0 | MC:  47.985 | Q: 45
+(172s)   Day 24: 2020-03-23 | S:2692 E:91   I:210  E+I+R:308  +Test:3/3 TestQueue:176 | P3:1536.00 2x: 4.22 | cold:30 allergies:3 flu:56 | H:7 C:0 D:0 | MC:  48.007 | Q: 56
+(180s)   Day 25: 2020-03-24 | S:2678 E:67   I:245  E+I+R:322  +Test:3/3 TestQueue:190 | P3:1935.24 2x: 4.35 | cold:26 allergies:2 flu:56 | H:9 C:0 D:4 | MC:  48.535 | Q: 63
+(190s)   Day 26: 2020-03-25 | S:2618 E:108  I:256  E+I+R:382  +Test:1/3 TestQueue:207 | P3:2438.25 2x: 4.34 | cold:30 allergies:2 flu:55 | H:9 C:0 D:6 | MC:  49.005 | Q: 59
+(198s)   Day 27: 2020-03-26 | S:2558 E:149  I:265  E+I+R:442  +Test:2/3 TestQueue:202 | P3:3000.00 2x: 4.35 | cold:31 allergies:3 flu:56 | H:9 C:0 D:9 | MC:  49.439 | Q: 57
+(207s)   Day 28: 2020-03-27 | S:2504 E:166  I:295  E+I+R:496  +Test:0/3 TestQueue:235 | P3:3000.00 2x: 4.40 | cold:30 allergies:4 flu:47 | H:9 C:0 D:10 | MC:  49.827 | Q: 59
+(215s)   Day 29: 2020-03-28 | S:2454 E:179  I:328  E+I+R:546  +Test:3/3 TestQueue:245 | P3:3000.00 2x: 4.46 | cold:31 allergies:1 flu:52 | H:9 C:0 D:12 | MC:  50.172 | Q: 59
+(219s)   Day 30: 2020-03-29 | S:2389 E:195  I:367  E+I+R:611  +Test:1/3 TestQueue:254 | P3:3000.00 2x: 4.50 | cold:26 allergies:3 flu:57 | H:8 C:0 D:12 | MC:  50.185 | Q: 50
+(225s)   Day 31: 2020-03-30 | S:2374 E:146  I:418  E+I+R:626  +Test:2/3 TestQueue:275 | P3:3000.00 2x: 4.62 | cold:28 allergies:5 flu:56 | H:9 C:0 D:14 | MC:  51.619 | Q: 55
+(233s)   Day 32: 2020-03-31 | S:2351 E:120  I:448  E+I+R:649  +Test:1/3 TestQueue:290 | P3:3000.00 2x: 4.74 | cold:31 allergies:1 flu:52 | H:9 C:0 D:18 | MC:  51.946 | Q: 48
+(242s)   Day 33: 2020-04-01 | S:2312 E:128  I:464  E+I+R:688  +Test:2/3 TestQueue:306 | P3:3000.00 2x: 4.82 | cold:32 allergies:2 flu:53 | H:9 C:0 D:22 | MC:  52.271 | Q: 51
+(250s)   Day 34: 2020-04-02 | S:2275 E:128  I:485  E+I+R:725  +Test:0/3 TestQueue:326 | P3:3000.00 2x: 4.92 | cold:35 allergies:2 flu:55 | H:9 C:0 D:26 | MC:  52.548 | Q: 48
+(259s)   Day 35: 2020-04-03 | S:2231 E:141  I:499  E+I+R:769  +Test:1/3 TestQueue:344 | P3:3000.00 2x: 5.00 | cold:32 allergies:5 flu:58 | H:9 C:0 D:30 | MC:  52.831 | Q: 50
+(267s)   Day 36: 2020-04-04 | S:2188 E:146  I:517  E+I+R:812  +Test:2/3 TestQueue:351 | P3:3000.00 2x: 5.08 | cold:30 allergies:1 flu:55 | H:9 C:0 D:34 | MC:  53.070 | Q: 45
+(270s)   Day 37: 2020-04-05 | S:2152 E:135  I:542  E+I+R:848  +Test:3/3 TestQueue:357 | P3:3000.00 2x: 5.18 | cold:34 allergies:3 flu:57 | H:9 C:0 D:43 | MC:  53.075 | Q: 44
+Transferring H:human:0 age:1, SEIR:1000 to HOUSEHOLD:883 - occ:1/inf - I:False because no adult at HOUSEHOLD:252 - occ:0/inf - I:True is alive. Current residents at HOUSEHOLD:883 - occ:1/inf - I:False: [H:human:729 age:20, SEIR:1000]
+(274s)   Day 38: 2020-04-06 | S:2144 E:94   I:566  E+I+R:856  +Test:0/3 TestQueue:393 | P3:3000.00 2x: 5.31 | cold:30 allergies:3 flu:50 | H:9 C:0 D:49 | MC:  53.077 | Q: 45
+(282s)   Day 39: 2020-04-07 | S:2139 E:67   I:575  E+I+R:861  +Test:0/3 TestQueue:390 | P3:3000.00 2x: 5.44 | cold:31 allergies:2 flu:47 | H:9 C:0 D:55 | MC:  53.328 | Q: 43
+Transferring H:human:141 age:8, SEIR:1000 to HOUSEHOLD:673 - occ:1/inf - I:False because no adult at HOUSEHOLD:16 - occ:0/inf - I:True is alive. Current residents at HOUSEHOLD:673 - occ:1/inf - I:False: [H:human:2976 age:75, SEIR:1000]
+(290s)   Day 40: 2020-04-08 | S:2100 E:78   I:562  E+I+R:900  +Test:1/3 TestQueue:386 | P3:3000.00 2x: 5.53 | cold:34 allergies:2 flu:54 | H:9 C:0 D:57 | MC:  53.541 | Q: 45
+(299s)   Day 41: 2020-04-09 | S:2053 E:100  I:563  E+I+R:947  +Test:2/3 TestQueue:389 | P3:3000.00 2x: 5.61 | cold:40 allergies:3 flu:53 | H:9 C:0 D:60 | MC:  54.096 | Q: 42
+(307s)   Day 42: 2020-04-10 | S:2022 E:115  I:551  E+I+R:978  +Test:1/3 TestQueue:402 | P3:3000.00 2x: 5.72 | cold:32 allergies:2 flu:50 | H:9 C:0 D:69 | MC:  54.306 | Q: 48
+(316s)   Day 43: 2020-04-11 | S:1989 E:114  I:545  E+I+R:1011 +Test:1/3 TestQueue:378 | P3:3000.00 2x: 5.81 | cold:33 allergies:4 flu:49 | H:9 C:0 D:74 | MC:  54.512 | Q: 45
+(319s)   Day 44: 2020-04-12 | S:1964 E:106  I:542  E+I+R:1036 +Test:1/3 TestQueue:378 | P3:3000.00 2x: 5.92 | cold:30 allergies:2 flu:46 | H:9 C:0 D:79 | MC:  54.516 | Q: 46
+(322s)   Day 45: 2020-04-13 | S:1955 E:82   I:534  E+I+R:1045 +Test:1/3 TestQueue:365 | P3:3000.00 2x: 6.04 | cold:30 allergies:6 flu:43 | H:9 C:0 D:86 | MC:  54.520 | Q: 51
+(330s)   Day 46: 2020-04-14 | S:1947 E:63   I:511  E+I+R:1053 +Test:1/3 TestQueue:355 | P3:3000.00 2x: 6.17 | cold:32 allergies:7 flu:46 | H:8 C:0 D:89 | MC:  54.725 | Q: 51
+(339s)   Day 47: 2020-04-15 | S:1906 E:78   I:491  E+I+R:1094 +Test:2/3 TestQueue:346 | P3:3000.00 2x: 6.26 | cold:29 allergies:1 flu:53 | H:9 C:0 D:92 | MC:  54.936 | Q: 53
+(347s)   Day 48: 2020-04-16 | S:1869 E:90   I:480  E+I+R:1131 +Test:1/3 TestQueue:338 | P3:3000.00 2x: 6.35 | cold:35 allergies:1 flu:52 | H:9 C:0 D:96 | MC:  55.142 | Q: 49
+(355s)   Day 49: 2020-04-17 | S:1838 E:96   I:468  E+I+R:1162 +Test:2/3 TestQueue:354 | P3:3000.00 2x: 6.45 | cold:35 allergies:4 flu:52 | H:9 C:0 D:99 | MC:  55.323 | Q: 48
+(363s)   Day 50: 2020-04-18 | S:1802 E:103  I:464  E+I+R:1198 +Test:1/3 TestQueue:348 | P3:3000.00 2x: 6.54 | cold:28 allergies:4 flu:45 | H:9 C:0 D:100 | MC:  55.492 | Q: 50
+(366s)   Day 51: 2020-04-19 | S:1765 E:111  I:461  E+I+R:1235 +Test:2/3 TestQueue:325 | P3:3000.00 2x: 6.64 | cold:26 allergies:7 flu:45 | H:9 C:0 D:106 | MC:  55.498 | Q: 56
+(370s)   Day 52: 2020-04-20 | S:1756 E:93   I:441  E+I+R:1244 +Test:0/3 TestQueue:325 | P3:3000.00 2x: 6.76 | cold:21 allergies:1 flu:45 | H:9 C:0 D:108 | MC:  55.506 | Q: 49
+Transferring H:human:111 age:1, SEIR:1000 to HOUSEHOLD:298 - occ:3/inf - I:False because no adult at HOUSEHOLD:36 - occ:0/inf - I:True is alive. Current residents at HOUSEHOLD:298 - occ:3/inf - I:False: [H:human:1661 age:49, SEIR:0001, H:human:2555 age:68, SEIR:1000, H:human:2508 age:69, SEIR:1000]
+(378s)   Day 53: 2020-04-21 | S:1748 E:74   I:436  E+I+R:1252 +Test:1/3 TestQueue:316 | P3:3000.00 2x: 6.88 | cold:23 allergies:1 flu:47 | H:9 C:0 D:113 | MC:  55.686 | Q: 48
+(386s)   Day 54: 2020-04-22 | S:1718 E:79   I:419  E+I+R:1282 +Test:0/3 TestQueue:293 | P3:3000.00 2x: 6.98 | cold:21 allergies:5 flu:45 | H:9 C:0 D:118 | MC:  55.875 | Q: 44
+(394s)   Day 55: 2020-04-23 | S:1684 E:86   I:415  E+I+R:1316 +Test:0/3 TestQueue:321 | P3:3000.00 2x: 7.07 | cold:20 allergies:2 flu:45 | H:9 C:0 D:119 | MC:  56.052 | Q: 44
+(402s)   Day 56: 2020-04-24 | S:1659 E:86   I:407  E+I+R:1341 +Test:2/3 TestQueue:292 | P3:3000.00 2x: 7.18 | cold:22 allergies:2 flu:44 | H:9 C:0 D:125 | MC:  56.210 | Q: 47
+(410s)   Day 57: 2020-04-25 | S:1637 E:82   I:413  E+I+R:1363 +Test:2/3 TestQueue:302 | P3:3000.00 2x: 7.28 | cold:21 allergies:0 flu:43 | H:9 C:0 D:132 | MC:  56.361 | Q: 40
+(413s)   Day 58: 2020-04-26 | S:1606 E:85   I:411  E+I+R:1394 +Test:2/3 TestQueue:298 | P3:3000.00 2x: 7.38 | cold:27 allergies:3 flu:44 | H:9 C:0 D:134 | MC:  56.374 | Q: 47
+(417s)   Day 59: 2020-04-27 | S:1602 E:71   I:395  E+I+R:1398 +Test:1/3 TestQueue:302 | P3:3000.00 2x: 7.50 | cold:30 allergies:4 flu:40 | H:9 C:0 D:137 | MC:  56.381 | Q: 43
+Transferring H:human:364 age:12, SEIR:0001 to HOUSEHOLD:1184 - occ:1/inf - I:False because no adult at HOUSEHOLD:222 - occ:0/inf - I:True is alive. Current residents at HOUSEHOLD:1184 - occ:1/inf - I:False: [H:human:1752 age:51, SEIR:1000, H:human:1775 age:50, SEIR:1000]
+
+######## COVID PROPERTIES #########
+Avg. incubation days  5.64
+Avg. recovery days  19.16
+Avg. infectiousnes onset days  3.38
+
+######## COVID SPREAD #########
+# human-human transmissions 1273.0
+# environment-human transmissions 149.0
+environmental transmission ratio 10.478 %
+Average generation time 7.094259995708592 
+Average serial interval 6.5020746887966805 
+Empirical Ro  1.983 (WARNING: It is an underestimate because it doesn't consider all infectious contacts during the recovery period of infected humans towards the end of the simulation) 
+
+******** Symptomaticity and Disease Spread *********
+
+R0 ( % Transmission ) of all human-human transmission
+* asymptomatic R0  1.723 ( 18.539 %)
+* presymptomatic R0  1.584 ( 36.842 %)
+* symptomatic R0  1.676 ( 44.619 %)
+
+******** Locations and Disease Spread *********
+
+R0 ( % Transmission ) of all human-human transmission
+* WORKPLACE R0  1.948 ( 58.759 %)
+* STORE R0  1.000 ( 0.079 %)
+* HOUSEHOLD R0  1.237 ( 26.237 %)
+* SCHOOL R0  1.708 ( 12.883 %)
+* HOSPITAL R0  1.923 ( 1.964 %)
+* MISC R0  1.000 ( 0.079 %)
+
+% Transmission of all environmental transmissions
+* % all transmission 100.000 %
+* % WORKPLACE transmission 32.886 %
+* % HOUSEHOLD transmission 44.295 %
+* % SCHOOL transmission 10.067 %
+* % STORE transmission 6.711 %
+* % MISC transmission 2.685 %
+* % PARK transmission 2.685 %
+* % HOSPITAL transmission 0.671 %
+
+######## SYMPTOMS #########
+P(symptoms = x | covid patient), where x is:
+   diarrhea                    : 0.3013
+    nausea_vomiting             : 0.2856
+    sneezing                    : 0.2336
+    moderate_trouble_breathing  : 0.1902
+    runny_nose                  : 0.1567
+    confused                    : 0.1019
+    lost_consciousness          : 0.0185
+    unusual                     : 0.0164
+    extremely-severe            : 0.0164
+    severe_chest_pain           : 0.0064
+P(symptoms = x | human had some sickness e.g. cold, flu, allergies, covid), where x is:
+   
+
+######## CONTACT PATTERNS #########
+weekday - | house: 2.141| work: 4.082| school: 9.115| other: 1.005| all: 2.320
+weekend - | house: 1.749| work: 2.125| school: 0.000| other: 1.184| all: 0.859
+
+######## MOBILITY STATISTICS #########
+Proportion of day spent in activities - 
+
+Unsupervised activities - 
+weekday - | work: 0.196| socialize: 0.043| grocery: 0.021| exercise: 0.015| idle: 0.305| sleep: 0.331
+weekend - | work: 0.204| socialize: 0.044| grocery: 0.021| exercise: 0.014| idle: 0.583| sleep: 0.333
+
+Supervised activities - 
+weekday - | work: 0.126| socialize: 0.045| grocery: 0.020| exercise: 0.015| idle: 0.314| sleep: 0.118
+weekend - | work: 0.179| socialize: 0.043| grocery: 0.027| exercise: 0.017| idle: 0.499| sleep: 0.107
+
+Social groups -
+size - mean: 0.27 | std:  1.79 | min:  0.00 | max:  46.00 | 
+location - total visits 11020.000001 | MISC: 5291 48.01 % | HOUSEHOLD: 5665 51.41 % | SENIOR_RESIDENCE: 61 0.55 % | HOSPITAL: 3 0.03 % | 
+Social network properties (degree statistics) - mean  56.55 | std.  36.38 | min  0.00 | max  161.00 | median  57.00
+
+end_time - 
+sleep - mean:  7.21 | std:  3.76 | min:  0.00 | max:  24.00 | 
+work - mean:  12.90 | std:  2.12 | min:  8.11 | max:  22.00 | 
+idle - mean:  14.58 | std:  8.41 | min:  0.00 | max:  24.00 | 
+exercise - mean:  11.89 | std:  3.44 | min:  1.17 | max:  23.00 | 
+grocery - mean:  11.23 | std:  3.19 | min:  8.00 | max:  22.00 | 
+socialize - mean:  11.85 | std:  3.03 | min:  8.00 | max:  22.00 | 
+
+duration - 
+sleep - mean:  7.40 | std:  1.81 | min:  0.00 | max:  9.26 | 
+work - mean:  4.57 | std:  2.17 | min:  0.00 | max:  14.00 | 
+idle - mean:  8.75 | std:  5.75 | min:  0.00 | max:  17.68 | 
+exercise - mean:  0.36 | std:  0.65 | min:  0.00 | max:  4.00 | 
+grocery - mean:  0.51 | std:  0.78 | min:  0.00 | max:  4.00 | 
+socialize - mean:  1.04 | std:  1.03 | min:  0.00 | max:  4.00 | 
+
+######## COVID Testing Statistics #########
+Positivity rate:  38.889 %
+Total Tests: 180 Total positive tests: 70 Total negative tests: 110
+Maximum tests given to an individual: 2
+Proportion of population tested until end:  6.000 %
+Proportion of population tested daily Avg:  0.097 %
+Proportion of population tested daily Max:  0.133 %
+Proportion of population tested daily Min:  0.000 %
+P(tested | symptoms = x), where x is 
+P(symptoms = x | tested), where x is:
+   runny_nose               : 0.2000
+    mild                     : 0.1611
+    aches                    : 0.1000
+    moderate                 : 0.0667
+    confused                 : 0.0611
+    extremely-severe         : 0.0222
+    lost_consciousness       : 0.0111
+    severe_chest_pain        : 0.0111
+    unusual                  : 0.0056
+    light_trouble_breathing  : 0.0056
+
+######## Effective Contacts & % infected #########
+Eff. contacts: 7.379 	 Healthy Eff. Contacts 7.779 	h % infected:  47.600%
+effective contacts per contacts (GLOBAL_MOBILITY_SCALING_FACTOR): 0.6468942539887469
+Probability of transmission: 0.026
+Serial interval:  6.502
+
+######## Bayesian Estimates of Rt #########
+using serial interval :7.094259995708592
+Rt: [2.5  0.32 0.33 0.37 0.4  0.53 1.45 0.94 0.73 1.21 1.96 2.47 1.83 1.95
+ 1.5  1.25 1.75 2.13 2.42 1.86]
+Dumping Tracker Data in /home/paredes/kingston-abm/experiments/validation/results/data/0x57e7aa91fbc783d1f3cd1bf719dd5a35/sim_v2_people-3000_days-60_init-0.002_uptake--1_seed-4789_20210706-135348_080507
