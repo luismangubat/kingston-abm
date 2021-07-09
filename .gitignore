@@ -128,5 +128,8 @@ dmypy.json
 # Pyre type checker
 .pyre/
 
-# Local cache
+# Local caches
+.hydra/
+.ipython-checkpoint
 temp/
+.Trash-0/
