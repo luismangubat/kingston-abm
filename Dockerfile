@@ -45,5 +45,5 @@ RUN apt install git -y
 
 RUN mkdir /src
 
-#CMD ansible-playbook -v --extra-vars "host=localhost" /src/ansible/playbooks/covid19sim.yml && sleep infinity
-CMD sleep infinity
+CMD ansible-playbook -v --extra-vars "host=localhost" /src/ansible/playbooks/covid19sim.yml && sleep infinity
+#CMD sleep infinity
