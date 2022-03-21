@@ -40,7 +40,7 @@
       git:
         repo: https://github.com/QuMuLab/COVI-AgentSim
         dest: ~/COVI-AgentSim
-        version: 8a8b9b5aa5ac4c13dd7220d856119e3916148622
+        version: 8a8b9b5aa5ac4c13dd7220d856119e3916148622 # add version for final configurations
         force: yes
         
     - name: Version of covid19sim module should be commit hash
